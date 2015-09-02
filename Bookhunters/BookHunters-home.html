@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BookHunters</title>
 
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!-- BookHunters -->
- <link href="css/bootstrap.min.css" rel="stylesheet">
- 
+<link rel="stylesheet" href="css/bootstrap.css">
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +41,19 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Log In</a> </li>
+        <li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 5px;">
+							<form method="post" action="login" accept-charset="UTF-8">
+								<input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+								<input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+								<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+								<label class="string optional" for="user_remember_me"> Remember me</label>
+								<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+							</form>
+						</div>
+					</li>
+        
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">University <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Queensland University of Technology</a> </li>
@@ -60,13 +73,11 @@
   <!-- /.container-fluid --> 
 </nav>
 
-
-
 <!-- HEADER -->
 <header>
   <div class="jumbotron">
     <div class="container">
-      <img src="/var/www/html/img/2.jpg" width="100%" alt="main image"/>
+      <img src="img/2.jpg" width="100%"  alt="main image"/>
       <div class="row"> </div>
     </div>
   </div>
@@ -165,27 +176,27 @@
   </div>
   <div class="container ">
     <div class="row">
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Aeron.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Aeron.jpg" data-holder-rendered="true">
         <h3>Aeron An</h3>
         <p>Front end HTML/php design </p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Toby.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Toby.jpg" data-holder-rendered="true">
         <h3>Toby Dray</h3>
         <p>Front end HTML/php design </p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Max.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Max.jpg" data-holder-rendered="true">
         <h3>Max Liang</h3>
         <p>Front end HTML/php design </p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Doug.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Doug.jpg" data-holder-rendered="true">
         <h3>Douglass Beard</h3>
         <p>Database/php</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Jack.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Jack.jpg" data-holder-rendered="true">
         <h3>Jack He</h3>
         <p>Database/php</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/var/www/html/img/Ahmed.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center col-md-4"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="img/Ahmed.jpg" data-holder-rendered="true">
         <h3>Ahmed Alghamdi</h3>
         <p>Database/php</p>
       </div>
