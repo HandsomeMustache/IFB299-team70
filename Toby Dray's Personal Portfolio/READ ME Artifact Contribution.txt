@@ -1,0 +1,15 @@
+Team Contribution Artifacts 
+
+1. Navbar Components of webpage: I developed a useful Nav bar that was linked 
+across all pages using a javascript function. This allowed the nav bar to be updated
+independently of the webpages it was being used on. 
+
+2. Web pages: Included signup.php page where the user signs up for bookhunters, upload book page, 
+the textbook list page, single book page and a phpmailertest page to prototype the 
+mailing function for our webpage. 
+
+3. Peer Review - All highlighted sections 
+
+4. Database model & Team Agreement documents 
+
+5. User Stories - Highlighted 
