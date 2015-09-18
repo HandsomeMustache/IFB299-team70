@@ -1,0 +1,3 @@
+This is an example of some front end html scripting I created for displaying the users uploads. As a user of this site it is
+crucial to have the ability to manage your textbooks. This page provides the user with that ability and delivers a lot of value
+to the user. It is a crucial part of how the site operates and is must have if the site is to deliver any bussiness value.

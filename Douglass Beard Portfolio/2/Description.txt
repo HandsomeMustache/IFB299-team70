@@ -1,0 +1,4 @@
+This script is an example of one of the include scripts. THis script interacts with the database pulling a list of all the users uploaded
+textbooks. On the top of the html front end this script is included and with the information recieved is outputted by the page it is include in.
+The goal of this script was to seperate as much of the backend from front end as possible. Although the front end script still needs php coding,
+by seperating scripts it helps categorize how the script interacts with the project.

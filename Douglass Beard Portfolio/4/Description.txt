@@ -1,0 +1,5 @@
+This script is an example of inserting data into the database via a submission. The script recieves POST data from
+a seperate front end page. It trims the data and validates it before making an entry in to the database to ensure data integrity. I didn't develop
+the code for the uploading of the image, that was done by a nother member. However i incooprated a transaction that
+ensure all of the data is incooprated or none of the data is inccoporated. This page adds the functionality to the upload
+page and without it no data would be stored in the database breaking other crucial functions within the project.

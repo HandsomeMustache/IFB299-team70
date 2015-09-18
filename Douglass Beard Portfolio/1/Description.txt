@@ -1,0 +1,4 @@
+This script contains a variety of functions to assist in the development of the project. The goal off this group of functions aimed to 
+provide functionallity when interacting with upload textbooks. Although this may not have siginifict influence onthe design or functionalty
+of the project it provide some ground work for developing the scripts. It also aims to minimize the size of the project ensuring that code isn't
+unneccessarily reused and avoids duplicates.

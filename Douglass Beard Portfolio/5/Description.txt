@@ -1,0 +1,4 @@
+This is an example of some of the user stories that I completed. Each storie is a crucial element of the project and is fundemental
+in order for the site to be successful. For each story I tried to follow the templete and follow the INVEST principles. User stories
+are a crucial part of the plainng as the ensure all of the clients needs are meet and the final product have the neccessary elements
+to deliver both customer and business value.
