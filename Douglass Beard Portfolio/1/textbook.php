@@ -22,7 +22,7 @@ function buildTextbookLink($id = '', $page = ''){
 
 */
 function generateLink($text = '', $link = '', $class=''){
-	return '<a class="'.$class'" href="'.$link.'">'.$text.'</a>';
+	return '<a class="'.$class.'" href="'.$link.'">'.$text.'</a>';
 }
 
 
