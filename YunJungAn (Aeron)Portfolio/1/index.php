@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<?php include'core/functions/notice.php'; ?>
 
-<link rel="shortcut icon" href="img/favicon-2.ico" type="image/favicon-2.ico" width="96px" height="96px">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/favicon.ico" width="96px" height="96px">
 <link rel="apple-touch-icon" href="img/small_icon.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="img/small_icon.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="img/small_icon.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/Icon-60@3x.png" />
 
 <link rel="icon" href="img/favicon-2.ico" type="image/favicon-2.ico">
 
@@ -58,10 +58,25 @@
 
     }
     </style>
+	
+	<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3LLuKz0zSAgFqZSsOvy7SNFPCuB9KrZu";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zopim Live Chat Script-->
+	
+	
 </head>
 
 <body>
-<?php include'components/header.php'; ?>
+<?php 
+include'components/header.php';
+printNotice();
+?>
 
 
 <!-- /container -->
@@ -76,8 +91,6 @@
         </div>
       </div>
     </div>
-
-
 
 
 <!-- Swiper -->
@@ -132,8 +145,6 @@
 <!-- / HEADER --> 
 
 
-  
-
 <!--  SECTION-1 -->
 <section>
   
@@ -164,6 +175,15 @@
           <small>DD <cite title="Source Title">GU</cite></small> </blockquote>
       </div>
     </div>
+    
+    <!-- comment box -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24MTmP51HKVbZ8QJY4.bT4Q0"+"&opts=16862&num=10&ts=1443161279817");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- comment box -->
+
+
+    
   <div class="jumbotron">
     <div class="container">
       <div class="row">
@@ -238,7 +258,10 @@
                 <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
                 <span class="help-block" style="display: none;">Please enter a message.</span></div>
               <span class="help-block" style="display: none;">Please enter a the security code.</span>
-              <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg" style=" margin-top: 10px;"> Send</button>
+              <button input type="submit" value="Send" onclick= "return confirm('Are you sure?')"style=" margin-top: 10px;"> Send</button>
+               
+          
+
             </form>
             <!-- END CONTACT FORM --> 
           </div>
@@ -262,5 +285,6 @@
 <script src="swiper.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
+
 </body>
 </html>

@@ -1,9 +1,16 @@
 <?php
   include "core/database/connect.php";
   include "core/functions/general.php";
-  include "core/validation.php";
-  $profile = retrieveProfile(activeUser(), $dbconn);
-  $user = retrieveUser(activeUser(), $dbconn);
+  session_start();
+
+  if (isset($_GET['id'])) {
+    $profile = retrieveProfile($_GET['id'], $dbconn);
+    $user = retrieveUser(activeUser(), $dbconn);
+  }else{
+    $profile = retrieveProfile(activeUser(), $dbconn);
+    $user = retrieveUser(activeUser(), $dbconn);
+    include "core/validation.php";
+  }
 ?>
 
 <html lang="en">
@@ -21,7 +28,10 @@
 
 </head>
 <body>
-<?php include'components/header.php'; ?>
+<?php 
+include'components/header.php';
+printNotice();
+?>
 
 
 <div class="container" style="padding-top: 5px;">
@@ -35,55 +45,57 @@
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-      <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
-        <i class="fa fa-coffee"></i>
-        This is an <strong>personal profile</strong>. Use this to show important messages to the user.
-      </div>
       <h3>Personal info</h3>
       <form class="form-horizontal" role="form">
         <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <p><?php echo $user['Username'];?></p>
+          <div class="col-md-8">
+          </div>
+        </div>
+        <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
-          <?php echo $profile['Firstname'];?>
+          <p><?php echo $profile['Firstname'];?></p>
           <div class="col-lg-8">
-            
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
-          <?php echo $profile['Lastname'];?>
+          <p><?php echo $profile['Surname'];?></p>
           <div class="col-lg-8">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">University:</label>
-          <?php echo $profile['University'];?>
+          <p><?php echo $profile['UniId'];?></p>
           <div class="col-lg-8">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Campus:</label>
-          <?php echo $profile['Campus'];?>
+          <p><?php echo $profile['CampusId'];?></p>
           <div class="col-md-8">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
-          <?php echo $profile['Email'];?>
+          <p><?php echo $profile['Email'];?></p>
           <div class="col-lg-8">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-3 control-label">Username:</label>
-          <?php echo $profile['Username'];?>
-          <div class="col-md-8">
           </div>
         </div>
        
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Edit" name="submit" type="submit">
+          <?php
+          if ($user['UserId'] == activeUser()) {
+            echo '<a class="btn btn-primary" href="edit_profile.php">Edit</a>';	
+          }
+          ?>
+		  
+		
+		  <a class="btn btn-default" href="myuploads.php">My Uploads</a>
+		  
           </div>
         </div>
       </form>
