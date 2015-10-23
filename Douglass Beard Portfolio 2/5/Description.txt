@@ -1,0 +1,1 @@
+This artefact is a set of functions that I allow the implementation of notices. The function utilizes session varible to pass information across pages. It consits of two functions, one to set the notice and one to print the notice. Although this function isn't essential it does allow scripts to inform users of completed actions or issues.
